@@ -52,5 +52,15 @@
         <entry key="foo" value="bar"/>
     </util:map>
 
+    <bean id="myPerson" class="pl_sda.Person">
+        <property name="firstName" value="Aleksander"/>
+        <property name="lastName" value="Nowa"/>
+    </bean>
+
+    <bean id="myStudent" class="pl_sda.Student">
+        <property name="firstName" value="#{myPerson.firstName}"/>
+        <property name="lastName" value="#{myPerson.lastName}"/>
+    </bean>
+
     <context:annotation-config />
 </beans>
